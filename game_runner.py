@@ -66,6 +66,9 @@ class BattleSnakeGameHandler:
         game_process = subprocess.run(command)
         # run the battlesnake.exe with the parameters and the snake urls
 
+    def set_random_seed(self, random_seed:int):
+        self.seed = random_seed
+
 
 if __name__ == "__main__":
     snake1 = BattleSnakeURL(name="bellos", url="http://127.0.0.1:51689")
