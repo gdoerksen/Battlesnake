@@ -128,6 +128,67 @@ The board can be represented as a graph with nodes being the coordinates
 of the board and edges being the possible moves.
 
 Will taking a move lead to a dead end?
+   if it looks like a cave 
 
 We could just make a rule not to make a cyclic graph 
+
+Look for longest current path?
+
+bread first search starting from head?
+
+compute the shortest path to food?
+and our enemies shortest path to food and compare?
+
+enemy snake data:
+    growth rate
+    did their previous move decrease their manhattan distance toward previous food?
+
+
+
+"""
+
+
+"""
+Environment:
+    board 
+    - food locations
+    - enemy snake locations
+    - hazards
+    - board width
+    - board height 
+    
+    myself
+    - myHealth
+    - myLocation
+    - myLength
+
+Output:
+    left, right, up, down 
+
+"""
+
+"""
+Deep Q Learning
+
+* initialize Q value
+
+* choose action - model.predict(state)
+* perform action
+* measure reward
+* update Q value (train model)
+* go back to choose action
+
+"""
+
+
+
+"""
+Python Engineer vids
+
+State (11 values)
+- danger direction straight, right or left [0, 0, 0]
+- snake direction left, right, up and down [ 0, 1, 0, 0]
+- food left, food right, food up, food down [0, 1, 0, 1]
+    * not right next to, but just directional
+
 """
