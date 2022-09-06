@@ -50,6 +50,10 @@ class Agent:
         self.trainer.train_step(state, action, reward, next_state, is_game_over)
 
     def get_action(self, state):
+        # [1, 0, 0] # straight
+        # [0, 1, 0] # right 
+        # [0, 0, 1] # left
+
         # random moves: tradeoff between exploration and exploitation
         self.epsilon = EPSILON_NUMBER_OF_GAMES - self.n_games_played
         final_move = [0,0,0]

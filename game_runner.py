@@ -1,6 +1,7 @@
 from typing import List
 import subprocess
 from pathlib import Path
+from time import sleep
 
 class BattleSnakeURL:
     def __init__(self, name, url):
@@ -76,5 +77,10 @@ if __name__ == "__main__":
     gameHandler = BattleSnakeGameHandler()
     gameHandler.add_snakes(snake1)
     #TODO set random seed for the game
-    gameHandler.start_game()
+
+    for _ in range(100):
+        gameHandler.start_game()
+        sleep(1)
+
+  
 

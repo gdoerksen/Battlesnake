@@ -9,7 +9,7 @@ class Linear_QNet(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super().__init__()
         self.linear1 = nn.Linear(input_size, hidden_size)
-        self.linear2 = nn.Linear(hidden_size, hidden_size)
+        self.linear2 = nn.Linear(hidden_size, output_size)
     
     def forward(self, x):
         # this executes the prediction via feed forward
@@ -36,6 +36,9 @@ class QTrainer:
     def train_step(self, state, action, reward, next_state, is_game_over):
         state = torch.tensor(state, dtype=torch.float)
         next_state = torch.tensor(next_state, dtype=torch.float)
+        #TODO UserWarning: Creating a tensor from a list of numpy.ndarrays 
+        # is extremely slow. Please consider converting the list to a single numpy.ndarray 
+        # with numpy.array() before converting to a tensor.
         action = torch.tensor(action, dtype=torch.long)
         reward = torch.tensor(reward, dtype=torch.float)
 
