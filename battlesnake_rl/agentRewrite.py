@@ -305,7 +305,7 @@ def train():
     best_score = 0
     agent = AgentRewrite()
 
-    from server import run_server
+    from battlesnake_rl.server import run_server
     server_args_dict = {"info": info, 
                         "start": agent.gameStarted, 
                         "move": agent.moveAndTrain, 

@@ -115,7 +115,7 @@ class BattleSnake:
 
 # Start server when `python main.py` is run
 if __name__ == "__main__":
-    from server import run_server
+    from battlesnake_rl.server import run_server
     myBattleSnake = BattleSnake("DawnbringerX7", "#333333", "default", "default")
 
     run_server({"info": myBattleSnake.info, 
