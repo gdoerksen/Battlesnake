@@ -1,0 +1,111 @@
+START
+{
+    "board": {
+        "food": [
+            {
+                "x": 2,
+                "y": 10
+            },
+            {
+                "x": 5,
+                "y": 5
+            }
+        ],
+        "hazards": [],
+        "height": 11,
+        "snakes": [
+            {
+                "body": [
+                    {
+                        "x": 1,
+                        "y": 9
+                    },
+                    {
+                        "x": 1,
+                        "y": 9
+                    },
+                    {
+                        "x": 1,
+                        "y": 9
+                    }
+                ],
+                "customizations": {
+                    "color": "#333333",
+                    "head": "default",
+                    "tail": "default"
+                },
+                "head": {
+                    "x": 1,
+                    "y": 9
+                },
+                "health": 100,
+                "id": "gs_prfkX8w3bXfkSk3BgCm3BBJM",
+                "latency": "",
+                "length": 3,
+                "name": "HelloWorld",
+                "shout": "",
+                "squad": ""
+            }
+        ],
+        "width": 11
+    },
+    "game": {
+        "id": "5aacedf9-5757-4bb4-9713-13a7e71b158c",
+        "map": "standard",
+        "ruleset": {
+            "name": "standard",
+            "settings": {
+                "foodSpawnChance": 15,
+                "hazardDamagePerTurn": 14,
+                "hazardMap": "",
+                "hazardMapAuthor": "",
+                "minimumFood": 1,
+                "royale": {
+                    "shrinkEveryNTurns": 0
+                },
+                "squad": {
+                    "allowBodyCollisions": false,
+                    "sharedElimination": false,
+                    "sharedHealth": false,
+                    "sharedLength": false
+                }
+            },
+            "version": "v1.1.17"
+        },
+        "source": "custom",
+        "timeout": 500
+    },
+    "turn": 0,
+    "you": {
+        "body": [
+            {
+                "x": 1,
+                "y": 9
+            },
+            {
+                "x": 1,
+                "y": 9
+            },
+            {
+                "x": 1,
+                "y": 9
+            }
+        ],
+        "customizations": {
+            "color": "#333333",
+            "head": "default",
+            "tail": "default"
+        },
+        "head": {
+            "x": 1,
+            "y": 9
+        },
+        "health": 100,
+        "id": "gs_prfkX8w3bXfkSk3BgCm3BBJM",
+        "latency": "",
+        "length": 3,
+        "name": "HelloWorld",
+        "shout": "",
+        "squad": ""
+    }
+}

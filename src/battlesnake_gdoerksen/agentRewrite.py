@@ -7,9 +7,9 @@ import torch
 from multiprocessing import Process
 
 # import local libraries 
-from model import Linear_QNet, QTrainer
-from game_runner import BattleSnakeGameHandler
-from game_runner import BattleSnakeURL
+from src.battlesnake_gdoerksen.model import Linear_QNet, QTrainer
+from src.battlesnake_gdoerksen.game_runner import BattleSnakeGameHandler
+from src.battlesnake_gdoerksen.game_runner import BattleSnakeURL
 
 MAX_RANDOM_SEED = 1000000
 
@@ -19,6 +19,9 @@ LEARNING_RATE = 0.001 # learning rate
 
 EPSILON_NUMBER_OF_GAMES = 80
 
+#TODO I suspect there is a bug that makes the snake collide with itself
+    # we can verify this by looking at the game logs or by running the game in the browser
+    # either way, we should refactor the code because it's badly organized  
 class AgentRewrite:
     def __init__(self):
         self.n_games_played = 0
@@ -305,7 +308,7 @@ def train():
     best_score = 0
     agent = AgentRewrite()
 
-    from server import run_server
+    from src.battlesnake_gdoerksen.server import run_server
     server_args_dict = {"info": info, 
                         "start": agent.gameStarted, 
                         "move": agent.moveAndTrain, 
@@ -329,3 +332,9 @@ def train():
 
 if __name__=="__main__":
     train()
+
+
+"""
+Currently we need the agent class to have a lot of class functions and variables because
+I don't know how to control the flow after we call run_server()
+"""

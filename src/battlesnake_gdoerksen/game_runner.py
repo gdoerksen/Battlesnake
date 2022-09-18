@@ -78,9 +78,10 @@ if __name__ == "__main__":
     gameHandler.add_snakes(snake1)
     #TODO set random seed for the game
 
-    for _ in range(100):
-        gameHandler.start_game()
-        sleep(1)
+
+    # for _ in range(100):
+    #     gameHandler.start_game()
+    #     sleep(1)
 
   
 
