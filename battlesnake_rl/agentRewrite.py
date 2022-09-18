@@ -7,9 +7,9 @@ import torch
 from multiprocessing import Process
 
 # import local libraries 
-from model import Linear_QNet, QTrainer
-from game_runner import BattleSnakeGameHandler
-from game_runner import BattleSnakeURL
+from battlesnake_rl.model import Linear_QNet, QTrainer
+from battlesnake_rl.game_runner import BattleSnakeGameHandler
+from battlesnake_rl.game_runner import BattleSnakeURL
 
 MAX_RANDOM_SEED = 1000000
 
