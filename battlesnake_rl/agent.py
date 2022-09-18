@@ -6,9 +6,9 @@ import numpy as np
 from collections import deque
 
 # import local libraries
-from game_runner import BattleSnakeGameHandler
-from game_runner import BattleSnakeURL
-from model import Linear_QNet, QTrainer
+from battlesnake_rl.game_runner import BattleSnakeGameHandler
+from battlesnake_rl.game_runner import BattleSnakeURL
+from battlesnake_rl.model import Linear_QNet, QTrainer
 
 MAX_RANDOM_SEED = 1000000
 

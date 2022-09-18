@@ -7,9 +7,9 @@ import torch
 from multiprocessing import Process
 
 # import local libraries 
-from model import Linear_QNet, QTrainer
-from game_runner import BattleSnakeGameHandler
-from game_runner import BattleSnakeURL
+from battlesnake_rl.model import Linear_QNet, QTrainer
+from battlesnake_rl.game_runner import BattleSnakeGameHandler
+from battlesnake_rl.game_runner import BattleSnakeURL
 
 MAX_RANDOM_SEED = 1000000
 
@@ -305,7 +305,7 @@ def train():
     best_score = 0
     agent = AgentRewrite()
 
-    from server import run_server
+    from battlesnake_rl.server import run_server
     server_args_dict = {"info": info, 
                         "start": agent.gameStarted, 
                         "move": agent.moveAndTrain, 
